@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0; /* Removes default body margin */
+            padding: 0; /* Removes default body padding */
+        }
+
+        #sidebar {
+            background-color: black;
+            color: white;
+            width: 350px;
+            height: 100vh; /* Full height */
+            position: fixed;
+            top: 0; /* Align to the top */
+            left: 0; /* Align to the left */
+            font-size: 20px;
+            padding-top: 100px; 
+        }
+
+        #sidebar img {
+            display: block; /* Ensures the image does not inline with text */
+            margin: 0 auto; /* Centers the image within its container */
+            max-width: 100%; /* Makes image responsive and fits the sidebar's width */
+            margin-bottom: 20px; /* Adjust the value to increase or decrease the white space */
+            height: auto; /* Maintains the aspect ratio */
+        }
+
+        #sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0; /* Removes default margin */
+        }
+
+        #sidebar li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            padding: 10px 50px;
+            line-height: 1.0; /* Adjusts the space between lines */
+            letter-spacing: 0.01em; /* Adjusts the space between characters */
+            font-size: 20px; 
+        }
+
+        #sidebar li a:hover {
+            background-color: #444;
+        }
+
+        .content {
+            margin-left: 400px;
+            padding: 20px;
+            padding-top: 100px; 
+            padding-right: 300px;
+        }
+
+        .specialheading {
+            text-align: center;
+            padding: 20px;
+            padding-right: 20px;
+            padding-top: 0px;
+            font-size: 38px;
+            line-height: 1.4; /* Adjusts the space between lines */
+            letter-spacing: 0.03em; /* Adjusts the space between characters */
+        }
+
+        .heading {
+            font-size: 35px;
+        }
+
+        .bio-text {
+            text-align: justify;
+            text-justify: inter-word;
+            line-height: 1.4; /* Adjusts the space between lines */
+            letter-spacing: 0.03em; /* Adjusts the space between characters */
+            font-size: 15px; 
+        }
+
+        .container {
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        .container div {
+            width: 24%;
+        }
+
+        .container img {
+            width: 100%;
+            border-radius: 15px; /* Optional: if you want rounded corners */
+        }
+    </style>
+</head>
+<body>
+
+<div id="sidebar">
+    <ul>
+        <h2 class="specialheading">Rohan Singh Wilkho</h2>
+        <img src="https://drive.google.com/uc?export=download&id=1XgN4gSiDbKeeHrQbKVaanJwWyD8E6UiG" alt="Headshot" style="border-radius: 50%; width: 200px; height: 200px;">
+
+        <li><a href="https://rohanswilkho93.github.io/">Home</a></li>
+        <li><a href="https://rohanswilkho93.github.io/projects.html">Projects</a></li>
+        <li><a href="projects.html">Publications</a></li>
+        <li><a href="projects.html">Software</a></li>
+        <li><a href="projects.html">Teaching</a></li>
+        <!-- Add more links as needed -->
+    </ul>
+</div>
+
+<!-- Main content of your webpage -->
+<div class = "content">
+    
+    <header>
+        <h1>Projects</h1>
+    </header>
+    
+    <section id="bio">
+        <h2 class="heading">GIS Tool for Dynamic Assessment of Community Flash Flood Susceptibility</h2>
+        <p class="bio-text">
+            In the US, flash floods are notorious as the leading cause of fatalities from natural disasters, striking unexpectedly and with localized devastation. Our research addresses the unique challenge these floods present due to their rapid and regional-specific nature. We're spearheading the development of a GIS-based tool, integrating advanced machine learning, to dissect and understand the diverse factors that incite flash floods in various regions.        </p>
+        </p>
+        <p class="bio-text">
+            This innovative tool goes beyond mere data analysis; it offers a tailored assessment of community susceptibility to flash floods, considering the distinct characteristics of each region. By providing customized, region-specific insights, our approach revolutionizes flash flood prediction and community preparedness. It's not just a technological breakthrough but a crucial step towards empowering communities, enhancing their resilience, and significantly reducing the risks associated with these unpredictable natural disasters.        </p>
+        </p>
+    </section>
+</div>
+</body>
+</html>
