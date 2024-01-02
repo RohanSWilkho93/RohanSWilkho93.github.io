@@ -1,31 +1,35 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0; /* Removes default body margin */
+            padding: 0; /* Removes default body padding */
         }
 
         #sidebar {
             background-color: black;
             color: white;
             width: 200px;
-            height: 100vh;
+            height: 100vh; /* Full height */
             position: fixed;
-            padding-top: 50px;
+            top: 0; /* Align to the top */
+            left: 0; /* Align to the left */
             font-size: 18px;
         }
 
         #sidebar ul {
             list-style-type: none;
             padding: 0;
-            text-align: center;
+            margin: 0; /* Removes default margin */
         }
 
         #sidebar li a {
             color: white;
             text-decoration: none;
             display: block;
+            text-align: left;
             padding: 10px 20px;
         }
 
