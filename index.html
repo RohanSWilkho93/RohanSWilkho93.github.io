@@ -1,8 +1,47 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
 
-<div id="sidebar" style="width: 200px; float: left;">
-    <h3>Navigation</h3>
+        #sidebar {
+            background-color: black;
+            color: white;
+            width: 200px;
+            height: 100vh;
+            position: fixed;
+            padding-top: 50px;
+            font-size: 18px;
+        }
+
+        #sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        #sidebar li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px 20px;
+        }
+
+        #sidebar li a:hover {
+            background-color: #444;
+        }
+
+        .content {
+            margin-left: 200px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="sidebar">
     <ul>
         <li><a href="home.html">Home</a></li>
         <li><a href="about.html">About</a></li>
