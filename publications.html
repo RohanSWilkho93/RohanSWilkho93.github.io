@@ -107,11 +107,14 @@
             border-collapse: collapse;
         }
         .publication-table td, .publication-table th {
-            border: 1px solid #ddd;
+            border: 1px solid transparent; /* Makes borders transparent */
             padding: 8px;
         }
+        .publication-table td:first-child, .publication-table th:first-child {
+            width: 50px; /* Reduces the width of the first column */
+        }
         .publication-table img {
-            width: 100px; /* or the width you prefer */
+            width: 100%; /* Makes the image fill the cell */
             height: auto;
         }
     </style>
@@ -140,10 +143,6 @@
     </header>
 
     <table class="publication-table">
-        <tr>
-          <th>Image</th>
-          <th>Publication Details</th>
-        </tr>
         <tr>
           <td><img src="https://drive.google.com/uc?export=download&id=1S68VrT4VkDx-4hlSG5REqffxyUYtXkZW" alt="Image description"></td>
           <td>
