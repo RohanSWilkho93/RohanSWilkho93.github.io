@@ -93,6 +93,29 @@
             width: 100%;
             border-radius: 15px; /* Optional: if you want rounded corners */
         }
+
+        .news-item {
+            list-style: none; /* Removes default list styling */
+            padding-left: 1.5em; /* Space for the custom icon */
+            margin-bottom: 10px; /* Space between news items */
+            position: relative;
+        }
+        
+        .news-item::before {
+            content: ''; /* Add your custom icon here */
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            /* Use background-image with a URL for an icon, or a Unicode character */
+        }
+        .news-icon-paper::before {
+            content: '\1F4C4'; /* Example: Unicode for a paper icon */
+        }
+        
+        .news-icon-award::before {
+            content: '\1F3C6'; /* Example: Unicode for a trophy icon */
+        }
     </style>
 </head>
 <body>
@@ -108,6 +131,11 @@
         <li><a href="software.html">Softwares</a></li>
         <li><a href="projects.html">Leadership & Service</a></li>
         <!-- Add more links as needed -->
+
+    <footer>
+        <p>© 2024 Rohan Singh Wilkho</p>
+    </footer>
+
     </ul>
 </div>
 
@@ -160,9 +188,11 @@
         </div>
     </div>
 
-    <footer>
-        <p>© 2023 Your Name</p>
-    </footer>
+    <ul>
+        <li class="news-item news-icon-paper">Oct 2021 - Paper: Two new papers accepted...</li>
+        <li class="news-item news-icon-award">Apr 2021 - Our paper on co-optimizing sensor...</li>
+        <!-- ... more items ... -->
+    </ul>
 
 </div>
 </body>
