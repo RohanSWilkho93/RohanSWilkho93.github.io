@@ -205,7 +205,7 @@
             height: auto;
         }
 
-        .news-table tr {
+        .hidden {
           display: none;
         }
     </style>
@@ -386,27 +386,29 @@
       function showMoreRows(visibleRows) {
         // Get all the rows in the table
         var rows = document.querySelectorAll('#news-table tr');
-        // Calculate the number of rows to show
-        var rowsToShow = visibleRows + 5;
-        // Loop through the rows and show/hide as necessary
-        for (var i = 0; i < rowsToShow && i < rows.length; i++) {
-          rows[i].style.display = ''; // Show the row
+        // Loop through the rows and show as many as specified by visibleRows
+        for (var i = 0; i < rows.length; i++) {
+          if (i < visibleRows) {
+            rows[i].classList.remove('hidden');
+          }
         }
         // If all rows are now visible, hide the 'Load More' button
-        if (rowsToShow >= rows.length) {
+        if (visibleRows >= rows.length) {
           document.getElementById('load-more').style.display = 'none';
         }
       }
     
       // Initially show the first 5 rows
-      showMoreRows(0);
+      document.addEventListener('DOMContentLoaded', function() {
+        showMoreRows(5);
+      });
     
       // Add an event listener to the 'Load More' button
       document.getElementById('load-more').addEventListener('click', function() {
         // Count the number of currently visible rows
-        var visibleRows = document.querySelectorAll('#news-table tr:not([style="display: none;"])').length;
+        var visibleRows = document.querySelectorAll('#news-table tr:not(.hidden)').length;
         // Show 5 more rows
-        showMoreRows(visibleRows);
+        showMoreRows(visibleRows + 5);
       });
     </script>
 
