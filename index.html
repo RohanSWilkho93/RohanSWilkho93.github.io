@@ -173,6 +173,34 @@
             height: auto;
             padding-top: 0px;
         }
+
+
+        hr {
+            border: none; /* Remove the default border */
+            height: 1px; /* Set the height of the line */
+            background-color: gray; /* Set the color of the line */
+            margin-top: 20px; /* Space above the line */
+            margin-bottom: 20px; /* Space below the line */
+        }
+
+        .publication-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 16px;
+        }
+        .publication-table td, .publication-table th {
+            border: 1px solid transparent; /* Makes borders transparent */
+            padding: 8px;
+        }
+        .publication-table td:first-child, .publication-table th:first-child {
+            width: 200px; /* Reduces the width of the first column */
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        .publication-table img {
+            width: 100%; /* Makes the image fill the cell */
+            height: auto;
+        }
     </style>
 </head>
 <body>

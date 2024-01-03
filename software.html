@@ -66,6 +66,13 @@
             letter-spacing: 0.03em; /* Adjusts the space between characters */
         }
 
+        .footercss {
+            text-align: left;
+            padding: 20px;
+            padding-top: 30px;
+            font-size: 15px;
+        }
+
         .heading {
             font-size: 35px;
         }
@@ -74,8 +81,15 @@
             text-align: justify;
             text-justify: inter-word;
             line-height: 1.4; /* Adjusts the space between lines */
-            letter-spacing: 0.03em; /* Adjusts the space between characters */
+            letter-spacing: 0.02em; /* Adjusts the space between characters */
             font-size: 15px; 
+        }
+
+        .tagline {
+            text-align: center;
+            font-size: 18px; 
+            color: #CBCBCB;
+
         }
 
         .container {
@@ -89,10 +103,77 @@
             width: 24%;
         }
 
+        .container div {
+            width: 24%;
+        }
+
         .container img {
             width: 100%;
             border-radius: 15px; /* Optional: if you want rounded corners */
         }
+
+        .news-item {
+            list-style: none; /* Removes default list styling */
+            padding-left: 1.5em; /* Space for the custom icon */
+            margin-bottom: 10px; /* Space between news items */
+            position: relative;
+            padding-top: 0px;
+        }
+        
+        .news-item::before {
+            content: ''; /* Add your custom icon here */
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            padding-top: 0px;
+            /* Use background-image with a URL for an icon, or a Unicode character */
+        }
+        .news-icon-paper::before {
+            content: '\1F4C4'; /* Example: Unicode for a paper icon */
+        }
+        
+        .news-icon-award::before {
+            content: '\1F3C6'; /* Example: Unicode for a trophy icon */
+        }
+        
+        .news-icon-talk::before {
+            content: '\1F3A4'; /* Example: Unicode for a trophy icon */
+        }
+        
+        .news-icon-website::before {
+            content: '\1F310'; /* Example: Unicode for a trophy icon */
+        }
+
+        .news-table {
+            padding: 0px;
+            padding-top: 0px;
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 16px;
+        }
+        .news-table td, .news-table th {
+            padding-top: 0px;
+            border: 1px solid transparent; /* Makes borders transparent */
+            text-align: justify;
+            text-justify: inter-word;
+            line-height: 1.4; /* Adjusts the space between lines */
+            letter-spacing: 0.02em; /* Adjusts the space between characters */
+        }
+        .news-table td:first-child, .news-table th:first-child {
+            padding-top: 0px;
+            width: 50px; /* Reduces the width of the first column */
+            text-align: justify;
+            text-justify: inter-word;
+            line-height: 1.4; /* Adjusts the space between lines */
+            letter-spacing: 0.02em; /* Adjusts the space between characters */
+        }
+        .news-table img {
+            width: 100%; /* Makes the image fill the cell */
+            height: auto;
+            padding-top: 0px;
+        }
+
 
         hr {
             border: none; /* Remove the default border */
@@ -105,7 +186,7 @@
         .publication-table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 17px;
+            font-size: 16px;
         }
         .publication-table td, .publication-table th {
             border: 1px solid transparent; /* Makes borders transparent */
@@ -113,25 +194,12 @@
         }
         .publication-table td:first-child, .publication-table th:first-child {
             width: 200px; /* Reduces the width of the first column */
+            text-align: justify;
+            text-justify: inter-word;
         }
         .publication-table img {
             width: 100%; /* Makes the image fill the cell */
             height: auto;
-        }
-        
-
-        .footercss {
-            text-align: left;
-            padding: 20px;
-            padding-top: 30px;
-            font-size: 15px;
-        }
-
-        .tagline {
-            text-align: center;
-            font-size: 18px; 
-            color: #CBCBCB;
-
         }
     </style>
 </head>
