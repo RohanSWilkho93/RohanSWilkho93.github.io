@@ -382,31 +382,32 @@
     <button id="load-more">Load More</button>
 
     <script>
-      // Get all the rows in the table except for the first one (assuming it's a header row)
-      var rows = document.querySelectorAll('#news-table tr');
-    
       // Function to show more rows
-      function showMoreRows(start, count) {
-        for (var i = start; i < start + count; i++) {
-          if (i < rows.length) {
-            rows[i].classList.remove('hidden');
-          } else {
-            // If there are no more rows to show, hide the 'Load More' button
-            document.getElementById('load-more').style.display = 'none';
-            break;
-          }
+      function showMoreRows(visibleRows) {
+        // Get all the rows in the table
+        var rows = document.querySelectorAll('#news-table tr');
+        // Calculate the number of rows to show
+        var rowsToShow = visibleRows + 5;
+        // Loop through the rows and show/hide as necessary
+        for (var i = 0; i < rowsToShow && i < rows.length; i++) {
+          rows[i].style.display = ''; // Show the row
+        }
+        // If all rows are now visible, hide the 'Load More' button
+        if (rowsToShow >= rows.length) {
+          document.getElementById('load-more').style.display = 'none';
         }
       }
     
       // Initially show the first 5 rows
-      showMoreRows(0, 5);
+      showMoreRows(0);
     
-      // Load more rows when the button is clicked
-      document.getElementById('load-more').onclick = function() {
-        // Count how many rows are already showing
-        var showingRows = document.querySelectorAll('#news-table tr:not(.hidden)').length;
-        showMoreRows(showingRows, 5); // Show 5 more rows
-      };
+      // Add an event listener to the 'Load More' button
+      document.getElementById('load-more').addEventListener('click', function() {
+        // Count the number of currently visible rows
+        var visibleRows = document.querySelectorAll('#news-table tr:not([style="display: none;"])').length;
+        // Show 5 more rows
+        showMoreRows(visibleRows);
+      });
     </script>
 
 </div>
