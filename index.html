@@ -212,36 +212,6 @@
         #sidebar li.current a {
             font-weight: bold;
         }
-
-        .carousel-container {
-            width: 100%; /* Adjust this if you want a different width */
-            max-width: 500px; /* Set a max-width if necessary */
-            margin: auto; /* This centers the carousel */
-            overflow: hidden; /* Hides anything outside the container bounds */
-        }
-
-        .carousel-slide {
-            display: flex;
-            width: 100%;
-        }
-
-        .carousel-slide img {
-            max-width: 100%; /* Makes the image responsive to the container width */
-            display: block; /* Prevents inline default spacing */
-            transition: transform 0.5s ease-in-out; /* Smooth transition for sliding */
-        }
-
-        /* Optional: If you want to add automatic sliding */
-        .carousel-slide {
-            animation: slide 10s infinite;
-        }
-
-        @keyframes slide {
-            25% { transform: translateX(-100%); }
-            50% { transform: translateX(-200%); }
-            75% { transform: translateX(-300%); }
-            100% { transform: translateX(-400%); }
-        }
     </style>
 </head>
 <body>
@@ -321,15 +291,7 @@
         <div>
             <h2><strong>Projects</strong></h2>
             <a href="projects.html">
-              <div class="carousel-container">
-                <div class="carousel-slide">
-                    <img src="projects.png" alt="Image 1">
-                    <img src="publications.png" alt="Image 2">
-                    <img src="software.png" alt="Image 3">
-                    <!-- Add more images as needed -->
-                </div>
-              </div>
-              <!-- <img src="projects.png" alt="Projects"> -->
+              <img src="projects.png" alt="Image 1">
             </a>
             <p><a href="projects.html">Some of my recent projects</a></p>
         </div>
