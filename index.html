@@ -212,39 +212,6 @@
         #sidebar li.current a {
             font-weight: bold;
         }
-
-        .slideshow {
-            max-width: 500px;
-            position: relative;
-            margin: auto;
-            overflow: hidden;
-        }
-
-        .slide {
-            display: none;
-        }
-
-        .fade {
-            animation-name: fade;
-            animation-duration: 4.8s;
-            animation-iteration-count: infinite;
-            animation-timing-function: ease-in-out;
-        }
-
-        /* Fading animation */
-        @keyframes fade {
-            0%   {opacity: 0;}
-            16.66% {opacity: 1;}
-            33.33% {opacity: 1;}
-            50%  {opacity: 0;}
-            100% {opacity: 0;}
-        }
-
-        /* Apply the animation delay based on the number of images */
-        .slideshow .slide:nth-child(1) { animation-delay: 0s; }
-        .slideshow .slide:nth-child(2) { animation-delay: 1.6s; }
-        .slideshow .slide:nth-child(3) { animation-delay: 3.2s; }
-        /* Add more for additional slides */
     </style>
 </head>
 <body>
@@ -324,19 +291,7 @@
         <div>
             <h2><strong>Projects</strong></h2>
             <a href="projects.html">
-              <div class="slideshow">
-                <div class="slide fade">
-                    <img src="projects.png" alt="Project 1">
-                </div>
-                <div class="slide fade">
-                    <img src="publications.png" alt="Project 2">
-                </div>
-                <div class="slide fade">
-                    <img src="software.png" alt="Project 3">
-                </div>
-                <!-- Add more slides as needed -->
-              </div>
-              <!-- <img src="projects.png" alt="Image 1"> -->
+              <img src="projects.png" alt="Image 1">
             </a>
             <p><a href="projects.html">Some of my recent projects</a></p>
         </div>
