@@ -55,11 +55,20 @@
             background-color: #444;
         }
 
-        .content {
+        /* .content {
             margin-left: 400px;
             padding: 20px;
             padding-top: 40px; 
             padding-right: 300px;
+        } */
+
+        .content {
+            margin-left: 350px;
+            padding: 50px;
+            padding-top: 40px; 
+            /* max-width: 800px; */
+            width: calc(100% - 350px);
+            box-sizing: border-box; 
         }
 
         .specialheading {
@@ -174,6 +183,11 @@
         }
 
 
+        .bio-text, .news-item, .news-table td, .news-table th {
+            line-height: 1.6; /* Adjusts the space between lines */
+        }
+
+        
         hr {
             border: none; /* Remove the default border */
             height: 1px; /* Set the height of the line */
@@ -201,6 +215,55 @@
 
         #sidebar li.current a {
             font-weight: bold;
+        }
+
+        
+
+        @media screen and (max-width: 768px) {
+            #sidebar {
+                width: 100%;
+                height: auto;
+                position: static;
+                padding-top: 20px;
+            }
+
+            .content {
+                margin-left: 0;
+                padding: 20px;
+                width: 100%; /* Ensures full width usage */
+                box-sizing: border-box; /* Includes padding in width calculation */
+            }
+
+            .container div {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .specialheading {
+                font-size: 28px;
+            }
+
+            .tagline {
+                font-size: 16px;
+            }
+
+            #sidebar li a {
+                padding: 10px 20px;
+                font-size: 18px;
+            }
+
+            .heading {
+                font-size: 24px;
+            }
+
+            .bio-text {
+                font-size: 14px;
+                line-height: 1.6; /* Increase line spacing for readability */
+            }
+
+            .news-table {
+                font-size: 13px;
+            }
         }
     </style>
 </head>
