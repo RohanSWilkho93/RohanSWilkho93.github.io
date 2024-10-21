@@ -2,6 +2,7 @@
 <html>
 <head>
     <link rel="icon" href="images/favicon.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
         body {
@@ -56,11 +57,19 @@
             background-color: #444;
         }
 
-        .content {
+        /* .content {
             margin-left: 400px;
             padding: 20px;
             padding-top: 40px; 
             padding-right: 300px;
+        } */
+
+        .content {
+            margin-left: 350px;
+            padding: 20px;
+            padding-top: 40px; 
+            max-width: 800px;
+            width: calc(100% - 350px);
         }
 
         .specialheading {
@@ -97,7 +106,7 @@
 
         }
 
-        .container {
+        /* .container {
             padding-top: 20px;
             display: flex;
             text-align: center;
@@ -109,6 +118,18 @@
 
         .container div {
             width: 24%;
+        } */
+
+        .container {
+            padding-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .container div {
+            width: 23%;
+            margin-bottom: 20px;
         }
 
         .container img {
@@ -207,6 +228,55 @@
         #sidebar li.current a {
             font-weight: bold;
         }
+
+        @media screen and (max-width: 768px) {
+          #sidebar {
+              width: 100%;
+              height: auto;
+              position: static;
+              padding-top: 20px;
+          }
+
+          .content {
+              margin-left: 0;
+              padding: 20px;
+          }
+
+          .container div {
+              width: 100%;
+              margin-bottom: 20px;
+          }
+
+          .specialheading {
+              font-size: 28px;
+          }
+
+          .tagline {
+              font-size: 16px;
+          }
+
+          #sidebar li a {
+              padding: 10px 20px;
+              font-size: 18px;
+          }
+
+          .heading {
+              font-size: 24px;
+          }
+
+          .bio-text {
+              font-size: 14px;
+          }
+
+          .news-table {
+              font-size: 13px;
+          }
+      }
+
+      img {
+          max-width: 100%;
+          height: auto;
+      }
     </style>
 </head>
 <body>
@@ -316,12 +386,17 @@
     <h2>News</h2>
     <table id="news-table" class="news-table">
         <tr>
-          <td><strong>May 2024</strong></td>
+          <td><strong>Sept 2024</strong></td>
+          <td>
+            <li class="news-item news-icon-talk">Started a Post-doctorate at <strong>Texas A&M University</strong></li>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Aug 2024</strong></td>
           <td>
             <li class="news-item news-icon-talk">Earned a <strong><a href="https://drive.google.com/file/d/1KBr7J12egQ9Tlb3juSgvTJFqWv2s7qo-/view?usp=drive_link">Doctorate in Civil Engineering</href></strong> from <strong>Texas A&M University</strong></li>
           </td>
         </tr>
-        <tr>
         <tr>
           <td><strong>May 2024</strong></td>
           <td>
