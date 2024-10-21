@@ -200,7 +200,6 @@
             padding-top: 0px;
         }
 
-
         hr {
             border: none; /* Remove the default border */
             height: 1px; /* Set the height of the line */
@@ -230,6 +229,10 @@
             font-weight: bold;
         }
 
+        .bio-text, .news-item, .news-table td, .news-table th {
+            line-height: 1.6; /* Adjusts the space between lines */
+        }
+        
         @media screen and (max-width: 768px) {
           #sidebar {
               width: 100%;
@@ -239,8 +242,10 @@
           }
 
           .content {
-              margin-left: 0;
-              padding: 20px;
+            margin-left: 0;
+            padding: 20px;
+            width: 100%; /* Ensures full width usage */
+            box-sizing: border-box; /* Includes padding in width calculation */
           }
 
           .container div {
@@ -389,19 +394,19 @@
         <tr>
           <td><strong>Sept 2024</strong></td>
           <td>
-            <li class="news-item news-icon-talk">Started a Post-doctorate at <strong>Texas A&M University</strong></li>
+            <li class="news-item news-icon-job">Started a Post-doctorate at <strong>Texas A&M University</strong></li>
           </td>
         </tr>
         <tr>
           <td><strong>Aug 2024</strong></td>
           <td>
-            <li class="news-item news-icon-talk">Earned a <strong><a href="https://drive.google.com/file/d/1KBr7J12egQ9Tlb3juSgvTJFqWv2s7qo-/view?usp=drive_link">Doctorate in Civil Engineering</href></strong> from <strong>Texas A&M University</strong></li>
+            <li class="news-item news-icon-award">Earned a <strong><a href="https://drive.google.com/file/d/1KBr7J12egQ9Tlb3juSgvTJFqWv2s7qo-/view?usp=drive_link">Doctorate in Civil Engineering</href></strong> from <strong>Texas A&M University</strong></li>
           </td>
         </tr>
         <tr>
           <td><strong>May 2024</strong></td>
           <td>
-            <li class="news-item news-icon-talk">Earned a <strong><a href="https://drive.google.com/file/d/1MIEWLRzNpuEm-qDVVKXSW0irBcnfrSqg/view?usp=drive_link">Masters in Computer Science</href></strong> from <strong>Texas A&M University</strong></li>
+            <li class="news-item news-icon-award">Earned a <strong><a href="https://drive.google.com/file/d/1MIEWLRzNpuEm-qDVVKXSW0irBcnfrSqg/view?usp=drive_link">Masters in Computer Science</href></strong> from <strong>Texas A&M University</strong></li>
           </td>
         </tr>
         <tr>
